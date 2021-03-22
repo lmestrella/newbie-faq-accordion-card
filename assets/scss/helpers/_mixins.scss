@@ -1,0 +1,7 @@
+@mixin pseudo($type, $position: inherit, $content: "") {
+  &::#{$type} {
+    content: $content;
+    position: $position;
+    @content;
+  }
+}

@@ -1,0 +1,33 @@
+.faq {
+  &__question {
+    position: relative;
+    display: inline-block;
+    padding: 1em 0;
+    width: 100%;
+
+    > img {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      transition: 300ms transform ease-in-out;
+    }
+  }
+  &__question:focus {
+    > img {
+      transform: translateY(-50%) rotate(180deg);
+    }
+    + p {
+      height: auto;
+      max-height: 10em;
+      padding-bottom: $default-spacing-size;
+    }
+  }
+  &__answer {
+    max-height: 0;
+    padding-right: 2em;
+    border-bottom: 1px solid $light-grayish-blue;
+    transition: 200ms all ease-in;
+    overflow: hidden;
+  }
+}
