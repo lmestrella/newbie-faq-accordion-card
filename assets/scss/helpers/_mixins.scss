@@ -5,8 +5,22 @@
     @content;
   }
 }
+
 @mixin breakpoint($size) {
   @media (min-width: map-get($map: $breakpoint, $key: $size)) {
     @content;
   }
+}
+
+@mixin background(
+  $value,
+  $repeat: no-repeat,
+  $size: contain,
+  $position: center
+) {
+  background: $value;
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+  @content;
 }

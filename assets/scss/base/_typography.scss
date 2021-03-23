@@ -1,29 +1,33 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
+
 .faq {
   h1 {
-    line-height: 1em;
     text-align: center;
+    line-height: 1em;
     font-size: 2rem;
+
     @include breakpoint(medium) {
       text-align: left;
     }
   }
+
   &__question {
-    text-decoration: none;
     color: $very-dark-grayish-blue;
     font-size: 0.825rem;
+    &:hover {
+      color: $soft-red;
+    }
   }
-  &__question:hover {
-    cursor: pointer;
-    color: $soft-red;
-  }
-  &__question:focus {
-    outline: none;
-    color: $very-dark-desaturated-blue;
+
+  input:checked + &__question {
     font-weight: bold;
+    &:hover {
+      color: $very-dark-desaturated-blue;
+    }
   }
+
   &__answer {
     color: $dark-grayish-blue;
     font-size: 0.75rem;
