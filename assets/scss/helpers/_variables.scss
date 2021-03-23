@@ -15,3 +15,9 @@ $light-grayish-blue: hsl(240, 5%, 91%);
 
 // Defaults
 $default-spacing-size: 1.5em;
+
+// Breakpoint - 375px, 1024px
+$breakpoint: (
+  "small": 23.4375em,
+  "medium": 64em,
+);

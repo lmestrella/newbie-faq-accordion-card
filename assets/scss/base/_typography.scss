@@ -1,11 +1,15 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
-h1 {
-  text-align: center;
-  font-size: 2rem;
-}
 .faq {
+  h1 {
+    line-height: 1em;
+    text-align: center;
+    font-size: 2rem;
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
   &__question {
     text-decoration: none;
     color: $very-dark-grayish-blue;
